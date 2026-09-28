@@ -222,8 +222,7 @@ details.teach .x{color:var(--bad);text-decoration:line-through}
       <label class="handle" for="name">@<input id="name" placeholder="your name" autocomplete="off" maxlength="24"></label>
       <div class="stats">
         <div><b>8</b>posts</div>
-        <div><b id="likeN2">0</b>likes</div>
-        <div><b>B1+</b>level</div>
+        <div><b>∞</b>likes</div>
       </div>
     </div>
   </section>
@@ -442,7 +441,7 @@ function totalScore(){ return Object.keys(SCORED).reduce((s,k)=>s+score(k),0); }
 let lastLikes = null;
 function refresh(){
   const n = totalScore();
-  $("likeN").textContent = n; $("likeN2").textContent = n; $("likeT").textContent = TOTAL;
+  $("likeN").textContent = n; $("likeT").textContent = TOTAL;
   if (lastLikes !== null && n > lastLikes){ const l = $("likes"); l.classList.remove("pop"); void l.offsetWidth; l.classList.add("pop"); }
   lastLikes = n;
   renderStories(); renderResult();
