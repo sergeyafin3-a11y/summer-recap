@@ -288,16 +288,16 @@ details.teach .x{color:var(--bad);text-decoration:line-through}
 
   <!-- 6 reading -->
   <article class="post" id="read">
-    <div class="ph"><div class="a">🐘</div><div><div class="n">varya.goes</div><div class="l">Bangkok → Phuket, Thailand</div></div><span class="tag">reading</span></div>
-    <div class="photo" style="background:#8EE3C8"><div class="emo">🐘🥭🏝️</div><div class="sticker" style="left:14px;top:16px;transform:rotate(-3deg)">10 days · Thailand</div></div>
+    <div class="ph"><div class="a">🛵</div><div><div class="n">varya.goes</div><div class="l">Hanoi → Da Nang, Vietnam</div></div><span class="tag">reading</span></div>
+    <div class="photo" style="background:#8EE3C8"><div class="emo">🛵🍜🏮</div><div class="sticker" style="left:14px;top:16px;transform:rotate(-3deg)">10 days · Vietnam</div></div>
     <div class="body" style="padding-top:14px">
       <div class="blog">
-        <h4>Thailand: 10 days, 400 photos, 1 sunburn</h4>
-        <p>Thailand had been on my <button class="w" data-tr="список желаний">wish list</button> for ages, so when my parents told me we were going there in July, I couldn't believe my luck.</p>
-        <p><span class="d">Days 1–3. Bangkok.</span> The flight took nine hours. I expected to feel <button class="w" data-tr="без сил">exhausted</button>, but I slept most of the way. Bangkok is louder, hotter and much busier than Moscow. We visited the Grand Palace, where you have to cover your shoulders and knees, so I had to buy trousers with elephants on them. Best souvenir ever.</p>
-        <p><span class="d">Days 4–8. Phuket.</span> Beach and food time. If you go to Thailand, you have to try mango sticky rice, a sweet dessert with coconut milk. I ate it every single day and I <button class="w" data-tr="жалеть">regret</button> nothing. Street food is really cheap: a full dinner costs about 250 roubles.</p>
-        <p><span class="d">Day 9.</span> It was <button class="w" data-tr="лил дождь">pouring with rain</button>, so we changed our plans and went to an elephant <button class="w" data-tr="приют, заповедник">sanctuary</button> instead of the islands. Honestly, it <button class="w" data-tr="оказался">turned out</button> to be the <button class="w" data-tr="самое яркое">highlight</button> of the trip: we fed the elephants and even washed them in the river.</p>
-        <p><span class="d">Day 10.</span> Flying home. Would I go again? Definitely, but next time in November, when the rainy season is over.</p>
+        <h4>Vietnam: 10 days, 400 photos, 1 sunburn</h4>
+        <p>Vietnam had been on my <button class="w" data-tr="список желаний">wish list</button> for ages, so when my parents told me we were going there in July, I couldn't believe my luck.</p>
+        <p><span class="d">Days 1–3. Hanoi.</span> The flight took nine hours. I expected to feel <button class="w" data-tr="без сил">exhausted</button>, but I slept most of the way. Hanoi is louder, hotter and much busier than Moscow, and there are millions of scooters everywhere! We visited the Temple of Literature, where you have to cover your shoulders and knees, so I had to buy a silk scarf at the market. Best souvenir ever.</p>
+        <p><span class="d">Days 4–8. Da Nang.</span> Beach and food time. If you go to Vietnam, you have to try pho, a noodle soup with beef and fresh herbs. I had it for breakfast every single day and I <button class="w" data-tr="жалеть">regret</button> nothing. Street food is really cheap: a full dinner costs about 250 roubles.</p>
+        <p><span class="d">Day 9.</span> It was <button class="w" data-tr="лил дождь">pouring with rain</button>, so we changed our plans and went to Hoi An, an old town full of colourful <button class="w" data-tr="фонарики">lanterns</button>, instead of the islands. Honestly, it <button class="w" data-tr="оказался">turned out</button> to be the <button class="w" data-tr="самое яркое">highlight</button> of the trip: in the evening we put a paper lantern on the river and made a wish.</p>
+        <p><span class="d">Day 10.</span> Flying home. Would I go again? Definitely, but next time in spring, when it isn't so hot and rainy.</p>
       </div>
       <p class="note" style="margin-top:0">Tap a dotted word to see the translation.</p>
       <div class="qlist" id="readQs"><div class="qq" style="font-family:var(--display);font-size:18px">True, False or Not stated?</div></div>
@@ -388,13 +388,13 @@ const VOICE = [
 ];
 
 const READ = [
-  {q:"Varya travelled to Thailand with her friends.", a:1},
+  {q:"Varya travelled to Vietnam with her friends.", a:1},
   {q:"She didn't sleep on the plane.", a:1},
-  {q:"Visitors to the Grand Palace must cover their shoulders and knees.", a:0},
-  {q:"Mango sticky rice is a spicy meat dish.", a:1},
-  {q:"She took a Thai cooking class in Phuket.", a:2},
-  {q:"The elephant sanctuary was her favourite part of the trip.", a:0},
-  {q:"She wants to go back to Thailand in July.", a:1}
+  {q:"Visitors to the Temple of Literature must cover their shoulders and knees.", a:0},
+  {q:"Pho is a sweet dessert.", a:1},
+  {q:"She took a Vietnamese cooking class in Da Nang.", a:2},
+  {q:"Hoi An was her favourite part of the trip.", a:0},
+  {q:"She wants to go back to Vietnam in July.", a:1}
 ];
 const TFN = ["True","False","Not stated"];
 
@@ -422,7 +422,7 @@ const SCORED = {tenses:TENSES, voice:VOICE, ifs:IFS, compare:COMPARE, read:READ}
 const SKILL_NAMES = {tenses:"Tenses", voice:"Listening", ifs:"Conditionals", compare:"Comparisons", read:"Reading"};
 const TOTAL = Object.values(SCORED).reduce((s,a)=>s+a.length,0);
 
-const KEY = "summer-recap-v6";
+const KEY = "summer-recap-v7";
 let S = {name:"", a:{}, seen:{}, pos:{}};
 try { const raw = localStorage.getItem(KEY); if (raw) S = Object.assign(S, JSON.parse(raw)); } catch(e){}
 function save(){ try { localStorage.setItem(KEY, JSON.stringify(S)); } catch(e){} }
