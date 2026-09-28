@@ -288,7 +288,7 @@ details.teach .x{color:var(--bad);text-decoration:line-through}
 
   <!-- 6 reading -->
   <article class="post" id="read">
-    <div class="ph"><div class="a">🐘</div><div><div class="n">artem.v</div><div class="l">Bangkok → Phuket, Thailand</div></div><span class="tag">reading</span></div>
+    <div class="ph"><div class="a">🐘</div><div><div class="n">varya.goes</div><div class="l">Bangkok → Phuket, Thailand</div></div><span class="tag">reading</span></div>
     <div class="photo" style="background:#8EE3C8"><div class="emo">🐘🥭🏝️</div><div class="sticker" style="left:14px;top:16px;transform:rotate(-3deg)">10 days · Thailand</div></div>
     <div class="body" style="padding-top:14px">
       <div class="blog">
@@ -388,13 +388,13 @@ const VOICE = [
 ];
 
 const READ = [
-  {q:"Artem travelled to Thailand with his friends.", a:1},
-  {q:"He didn't sleep on the plane.", a:1},
+  {q:"Varya travelled to Thailand with her friends.", a:1},
+  {q:"She didn't sleep on the plane.", a:1},
   {q:"Visitors to the Grand Palace must cover their shoulders and knees.", a:0},
   {q:"Mango sticky rice is a spicy meat dish.", a:1},
-  {q:"He took a Thai cooking class in Phuket.", a:2},
-  {q:"The elephant sanctuary was his favourite part of the trip.", a:0},
-  {q:"He wants to go back to Thailand in July.", a:1}
+  {q:"She took a Thai cooking class in Phuket.", a:2},
+  {q:"The elephant sanctuary was her favourite part of the trip.", a:0},
+  {q:"She wants to go back to Thailand in July.", a:1}
 ];
 const TFN = ["True","False","Not stated"];
 
@@ -422,7 +422,7 @@ const SCORED = {tenses:TENSES, voice:VOICE, ifs:IFS, compare:COMPARE, read:READ}
 const SKILL_NAMES = {tenses:"Tenses", voice:"Listening", ifs:"Conditionals", compare:"Comparisons", read:"Reading"};
 const TOTAL = Object.values(SCORED).reduce((s,a)=>s+a.length,0);
 
-const KEY = "summer-recap-v5";
+const KEY = "summer-recap-v6";
 let S = {name:"", a:{}, seen:{}, pos:{}};
 try { const raw = localStorage.getItem(KEY); if (raw) S = Object.assign(S, JSON.parse(raw)); } catch(e){}
 function save(){ try { localStorage.setItem(KEY, JSON.stringify(S)); } catch(e){} }
